@@ -1,10 +1,3 @@
-# pipeline-r-demo
-
-Beispiel einer Pipeline, die folgendes kann:
-- R Package bauen und überprüfen
-- Erstellung eines Docker Images
-
-```
 name: Standard Pipeline
 
 on:
@@ -33,10 +26,3 @@ jobs:
 
     - name: docker build
       run: docker build -t r-demo .
-```
-
-## Referenzen
-- Building an R package: https://kbroman.org/pkg_primer/pages/build.html
-- Checking an R package: https://kbroman.org/pkg_primer/pages/check.html
-
-- Docker Pipeline: https://partner.bdr.de/gitlab/kfe-devops/docker-demo
