@@ -1,4 +1,5 @@
 # pipeline-r-demo
+Der Code für das Beispiel stammt von: https://rstudio.github.io/shinydashboard/get_started.html
 
 Beispiel einer Pipeline, die folgendes kann:
 - R Package bauen und überprüfen
