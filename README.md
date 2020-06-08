@@ -1,4 +1,5 @@
 # pipeline-r-demo
+Der Code für das Beispiel stammt von: https://rstudio.github.io/shinydashboard/get_started.html
 
 Beispiel einer Pipeline, die folgendes kann:
 - R Package bauen und überprüfen
@@ -12,31 +13,11 @@ on:
   pull_request:
 
 jobs:
-  check:
-    runs-on: ubuntu-18.04
-    steps:
-    - uses: actions/checkout@v2
-    - uses: r-lib/actions/setup-r@v1
-      with:
-        r-version: 4.0.0
-
-    - name: build
-      run: R CMD build . --no-build-vignettes --no-manual
-
-    - name: check
-      run: R CMD check *tar.gz --no-build-vignettes --no-manual
-
   docker:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
 
     - name: docker build
-      run: docker build -t r-demo .
+      run: docker build -t r-demo -f Dockerfile .
 ```
-
-## Referenzen
-- Building an R package: https://kbroman.org/pkg_primer/pages/build.html
-- Checking an R package: https://kbroman.org/pkg_primer/pages/check.html
-
-- Docker Pipeline: https://partner.bdr.de/gitlab/kfe-devops/docker-demo

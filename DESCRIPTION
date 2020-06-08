@@ -1,8 +1,0 @@
-Package: test
-Version: 0.1.0
-Title: GitLab CI Demo
-Description: A Demo Project
-Author: Jonas Michaelis
-Maintainer: Jonas Michaelis <jonas.michaelis@bdr.de>
-License: MIT
-Encoding: UTF-8
