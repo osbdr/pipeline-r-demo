@@ -1,4 +1,4 @@
-FROM rocker/shiny-verse:4.3.0
+FROM rocker/shiny-verse:4.3.3
 
 RUN rm -rf /srv/shiny-server/*
 RUN echo > /srv/shiny-server/index.html
